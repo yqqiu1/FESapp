@@ -1,0 +1,92 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LearnModules.json" />
+    <None Remove="Question.json" />
+    <None Remove="QuizList.json" />
+    <None Remove="QuizQuestions.json" />
+    <None Remove="feslogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ansuria.XFGloss" Version="1.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="refit" Version="4.7.51" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.2.0.815419" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="LearnModules.json" />
+    <EmbeddedResource Include="Question.json" />
+    <EmbeddedResource Include="QuizList.json" />
+    <EmbeddedResource Include="QuizQuestions.json" />
+    <EmbeddedResource Include="feslogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="RestService.cs" />
+    <Compile Remove="CheckList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\Learn.xaml.cs">
+      <DependentUpon>Learn.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Module.xaml.cs">
+      <DependentUpon>Module.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VideoQuestion.xaml.cs">
+      <DependentUpon>VideoQuestion.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AboutFESTabbed.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Answer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ImageQuestion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\QuestionTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Module.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AboutFES.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Learn.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Quiz.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\test.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TextQuestion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\VideoQuestion.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="utils\" />
+  </ItemGroup>
+</Project>

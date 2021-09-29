@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:VM="clr-namespace:FESapp.ViewModel"
+             mc:Ignorable="d"
+             Visual="Material"
+             x:Class="FESapp.Quiz"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#C7C8CA">
+            <Grid x:Name="pseudoNavigationBar"
+                ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Text="Home"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     TextColor="Black"
+                     BackgroundColor="White"
+                     CornerRadius="0"   
+                     Clicked="OnHomeButtonClicked"
+                    />
+                <Button Text="Help"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        CornerRadius="0"   
+                        Clicked="OnHelpButtonClicked"
+                        />
+                <Image Source="feslogo.png"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       BackgroundColor="White"
+                       />
+            </Grid>
+
+            <Label
+                   Text="Quiz"
+                   FontSize="Header"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   BackgroundColor="#66C43E3E"
+                   TextColor="#000000">
+            </Label>
+
+            <CollectionView x:Name="MyListView"
+                            BackgroundColor="#C7C8CA"
+                            ItemsSource="{Binding questionListObservable}"
+                            SelectionMode="Single"
+                            Visual="Material"
+                            SelectionChanged="OnQuizSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical"
+                                     BackgroundColor="#C7C8CA" 
+                                     Visual="Material">
+                            <Frame BackgroundColor="#C7C8CA"
+                               Margin="10,0">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale"
+                                                        Value="1" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                        <VisualState x:Name="Pressed">
+                                            <VisualState.Setters>
+                                                <Setter Property="Scale"
+                                                        Value="0.8" />
+                                                <Setter Property="BackgroundColor" Value="#C7C8CA"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Label Text="{Binding quizName}"    
+                                       TextColor="Black"
+                                       BackgroundColor="#C7C8CA"
+                                       HorizontalOptions="CenterAndExpand"                                                     
+                                       FontSize="Title">
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+   
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FESapp.App">
+    
+    <Application.Resources>
+
+        <!--FES red #ED1C24
+        FES 25% black #C7C8CA
+        FES 50% black #939598 
+        -->
+        
+        <Style
+            ApplyToDerivedTypes="True"
+            TargetType="Page">
+            <Setter Property="Visual" Value="Material"/>
+            <Setter Property="BackgroundColor" Value="#C7C8CA"/>
+        </Style>
+
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="TextColor" Value="#939598"/>
+            <Setter Property="CornerRadius" Value="0"/>
+
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Lime" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="FontSize" Value="36" />
+                                <Setter Property="BackgroundColor" Value="Lime" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Pink" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+
+            <Setter Property="BorderColor" Value="Lime" />
+            <Setter Property="BorderRadius" Value="5" />
+            <Setter Property="BorderWidth" Value="5" />
+            <Setter Property="WidthRequest" Value="200" />
+            <Setter Property="TextColor" Value="Teal" />
+
+        </Style>
+
+    </Application.Resources>
+</Application>

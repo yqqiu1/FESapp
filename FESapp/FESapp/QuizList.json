@@ -1,0 +1,50 @@
+{
+  "QuizList": [
+    {
+      "QuizName": "quiz1",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a fire extinguisher?",
+          "answerA": "Answer A",
+          "answerB": "Answer B",
+          "answerC": "Answer C",
+          "answerD": "Answer D",
+          "correctAnswer": "Answer C"
+        },
+        {
+          "id": 2,
+          "question": "What is a fire?",
+          "answerA": "Answer A2",
+          "answerB": "Answer B2",
+          "answerC": "Answer C2",
+          "answerD": "Answer D2",
+          "correctAnswer": "Answer A2"
+        }
+      ]
+    },
+    {
+      "QuizName": "quiz2",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is a fire extinguisher?",
+          "answerA": "Answer A",
+          "answerB": "Answer B",
+          "answerC": "Answer C",
+          "answerD": "Answer D",
+          "correctAnswer": "Answer C"
+        },
+        {
+          "id": 2,
+          "question": "What is a fire?",
+          "answerA": "Answer A2",
+          "answerB": "Answer B2",
+          "answerC": "Answer C2",
+          "answerD": "Answer D2",
+          "correctAnswer": "Answer A2"
+        }
+      ]
+    }
+  ]
+}

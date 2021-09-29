@@ -1,0 +1,47 @@
+﻿{Quiz1:[
+		{"id":1,
+		"question":"What is a fire extinguisher?",
+		"answerA":"Answer A",
+		"answerB":"Answer B",
+		"answerC":"Answer C",
+		"answerD":"Answer D"
+		},
+		{"id":2,
+		"question":"What is a fire hose?",
+		"answerA":"Answer A",
+		"answerB":"Answer B",
+		"answerC":"Answer C",
+		"answerD":"Answer D"
+		},
+		{"id":3,
+		"question":"What is a fire truck?",
+		"answerA":"Answer A",
+		"answerB":"Answer B",
+		"answerC":"Answer C",
+		"answerD":"Answer D"
+		}
+	],
+Quiz2: [
+		{"id":1,
+		"question":"What is a fire?",
+		"answerA":"Answer A",
+		"answerB":"Answer B",
+		"answerC":"Answer C",
+		"answerD":"Answer D"
+		},
+		{"id":2,
+		"question":"What is a fireman?",
+		"answerA":"Answer A",
+		"answerB":"Answer B",
+		"answerC":"Answer C",
+		"answerD":"Answer D"
+		},
+		{"id":3,
+		"question":"What is a firefighter?",
+		"answerA":"Answer A",
+		"answerB":"Answer B",
+		"answerC":"Answer C",
+		"answerD":"Answer D"
+		}
+	],
+}

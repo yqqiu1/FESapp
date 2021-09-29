@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FESapp.BuildingSafetyCheckList">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Label Text="Check List Questions Will Be Put Here And A Picture Would Shown Under This Sentence."
+                       Margin="40,20,40,0"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="CenterAndExpand"/>
+                <Image Source="u9.png" 
+                       Margin="40,0"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Yes"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand" 
+                        WidthRequest="250"/>
+                <Button Text="No"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="250"/>
+                <Button Text="Not Sure"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="CenterAndExpand"
+                        WidthRequest="250" Margin="0,0,0,40"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         VerticalOptions="End" Margin="40,0">
+                <Button Text="back"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                        WidthRequest="100"/>
+                <Button Text="next"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                        WidthRequest="100"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

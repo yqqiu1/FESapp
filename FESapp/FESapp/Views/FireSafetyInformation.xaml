@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FESapp.FireSafetyInformation">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--
+            <StackLayout Orientation="Horizontal" 
+                         HeightRequest="60" 
+                         BackgroundColor="White">
+
+                <StackLayout WidthRequest="60"
+                             HorizontalOptions="Start">
+                    <ImageButton Source="u27.png"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Clicked="OnMainPageImageButtonClicked" />
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Image Source="u9.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout WidthRequest="60"
+                             HorizontalOptions="End">
+                    <ImageButton Source="u26.png"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Clicked="OnHelpFSIImageButtonClicked"/>
+                </StackLayout>
+
+            </StackLayout>
+            <StackLayout>
+                <ImageButton Source="u20.png"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Clicked="OnIMImageButtonClicked"/>
+            </StackLayout>
+            
+            <StackLayout>
+                <ImageButton Source="u19.png"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Clicked="OnBSCImageButtonClicked"/>
+            </StackLayout>
+
+            -->
+
+            <ImageButton Source="u20.png"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand"
+                            Clicked="OnIMImageButtonClicked"/>
+
+            <ImageButton Source="u19.png"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand"
+                            Clicked="OnBSCImageButtonClicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

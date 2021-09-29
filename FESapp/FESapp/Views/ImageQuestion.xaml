@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:video="clr-namespace:FESapp.FormsVideoLibrary"
+             mc:Ignorable="d"
+             x:Class="FESapp.Views.ImageQuestion"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="pseudoNavigationBar"
+              Grid.Row="0"
+                ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Text="Home"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     TextColor="Black"
+                     BackgroundColor="White"
+                     CornerRadius="0"   
+                     Clicked="OnHomeButtonClicked"
+                    />
+            
+            <Button Text="Help"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        CornerRadius="0"   
+                        Clicked="OnHelpButtonClicked"
+                        />
+            <Image Source="feslogo.png"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       BackgroundColor="White"
+                       />
+        </Grid>
+
+        <Image Grid.Row="1"
+               x:Name="Image">
+        </Image>
+
+        <ScrollView Grid.Row="2">
+            <StackLayout>
+                <Label Text="{Binding Question}"
+                       TextColor="Black" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <Button x:Name="buttonAnswerA" 
+                        Text="{Binding AnswerA}"
+                        Command="{Binding ButtonA}"
+                        VerticalOptions= "FillAndExpand"
+                        Clicked="OnButtonAClicked" />
+
+                <Button x:Name="buttonAnswerB"
+                        Text="{Binding AnswerB}"
+                        Command="{Binding ButtonB}"
+                        VerticalOptions= "FillAndExpand"
+                        Clicked="OnButtonBClicked" />
+
+                <Button x:Name="buttonAnswerC" 
+                    Text="{Binding AnswerC}"
+                    Command="{Binding ButtonC}"
+                    VerticalOptions= "FillAndExpand"
+                    Clicked="OnButtonCClicked" />
+
+                <Button x:Name="buttonAnswerD" 
+                    Text="{Binding AnswerD}"
+                    Command="{Binding ButtonD}"
+                    VerticalOptions= "FillAndExpand"
+                    Clicked="OnButtonCClicked" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

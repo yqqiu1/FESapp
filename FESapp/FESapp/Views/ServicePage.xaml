@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FESapp.ServicesPage">
+    
+  <CollectionView x:Name="MyListView"
+            ItemsSource="{Binding Items}"           
+            >
+            
+    
+    <CollectionView.ItemTemplate>
+      <DataTemplate>
+       <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            
+          <StackLayout
+             Orientation="Vertical"
+                 Margin="15"
+              
+              >
+            <Label Text="{Binding title}"
+                   FontSize="Title"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="13"
+
+                   />
+            <Label Text="{Binding content}"
+                   FontSize="Body"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="13"
+                   />
+          </StackLayout>
+         </Grid>
+                
+       
+      </DataTemplate>
+    </CollectionView.ItemTemplate>
+   
+  </CollectionView>
+</ContentPage>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+                          Visual="Material"
+
+             x:Class="FESapp.AboutFES">
+    <ContentPage.ToolbarItems>
+    <ToolbarItem Text ="Item 1"
+                 
+                Priority="0" Order="Primary" />  
+  <ToolbarItem Text ="Item 2"  
+              Priority="1" Order="Primary" />  
+      </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Image x:Name="image"/>
+
+            <Button
+                Text="Customer Portal Login"
+                BorderColor="Red"
+                BorderWidth="2"
+                Clicked="OnLoginClicked"
+                HorizontalOptions="Center"
+                Margin="20"
+                TextColor="Black"
+                Padding="8"/>
+           
+            <Frame
+                 Margin="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                BorderColor="Red">
+ <Label Text="Fire Equipment Services (FES) is a business unit of the Metropolitan Fire Brigade (MFB) in Victoria, Australia, and has been in the fire prevention industry for over 100 years.
+Fire Equipment Services provide essential safety services at over 24,000 sites in Australia, with customers including major hospitals, universities, commercial premises and small businesses."
+                   
+                   />
+
+           </Frame>
+
+              <Button
+                Text="Our Services"
+                BorderColor="Red"
+                  BorderWidth="2"
+                HorizontalOptions="Center"
+                Margin="20"
+                  Clicked="OnServicesClicked"
+                TextColor="Black"
+                Padding="8"/>
+            <StackLayout
+                
+                Orientation="Horizontal">
+       <Button
+               Text="Contact FEES"
+                BorderColor="Red"
+                BorderWidth="2"
+                HorizontalOptions="Start"
+                Margin="20"
+               
+                TextColor="Black"
+         
+                Padding="8"/>
+ <Button
+               Text="Visit Website"
+                BorderColor="Red"
+                BorderWidth="2"
+                Clicked="OnVistWebButtonClicked" 
+                HorizontalOptions="EndAndExpand"
+                Margin="20"               
+                TextColor="Black"         
+                Padding="8"/>
+                </StackLayout>
+        </StackLayout >
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

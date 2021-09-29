@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:FESapp.utils"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="FESapp.MainPage">
+    
+    <Grid
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+                <!--FES logo-->
+                    <Image Source="feslogo.png"
+                           Grid.Row="0"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                    </Image>
+
+        <Image Source="learnIcon.png"
+               Grid.Row="1"
+               HorizontalOptions="Start"
+               Scale="0.8"
+               >
+            
+        </Image>
+
+        <Image Source="quizIcon.png"
+               Grid.Row="2"
+               HorizontalOptions="Start"
+               Scale="0.8"
+               >
+        </Image>
+
+        <Image Source="checklistIcon.png"
+               Grid.Row="3"
+               HorizontalOptions="Start"
+               Scale="0.8"
+               >
+        </Image>
+        
+        <!--Learn item-->
+                    <Button Text="Learn"
+                            Grid.Row="1"
+                            CornerRadius="0"
+                            TextColor="#ED1C24"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Clicked="LearnButtonClicked"
+                            BackgroundColor="#66C43E3E"
+                            FontAttributes="Bold"
+                            FontFamily="dubai"
+                            FontSize="35"   
+                            FlowDirection="RightToLeft"
+                            >
+                        <Button.Triggers>
+                            <EventTrigger Event="Pressed">
+                                <local:ButtonTriggerAction BackgroundColor="Red" />
+                            </EventTrigger>
+                            <EventTrigger Event="Released">
+                                <local:ButtonTriggerAction BackgroundColor="Default" />
+                            </EventTrigger>
+                    </Button.Triggers>
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"  Value="0.8" />
+                                    <Setter Property="BackgroundColor" Value="#00FF00"/>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+
+                </Button>
+
+
+            <!--Quiz item-->
+        <Button Text="Quiz"
+                    Grid.Row="2"
+                    CornerRadius="0"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Clicked="QuizButtonClicked"
+                    BackgroundColor="#66939598"
+                    FontSize="35"
+                    FontAttributes="Bold"
+                    FontFamily="dubai"
+                    FlowDirection="RightToLeft">
+
+            <Button.Triggers>
+                <EventTrigger Event="Pressed">
+                    <local:ButtonTriggerAction BackgroundColor="Red" />
+                </EventTrigger>
+                <EventTrigger Event="Released">
+                    <local:ButtonTriggerAction BackgroundColor="Default" />
+                </EventTrigger>
+            </Button.Triggers>
+
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"  Value="0.8" />
+                            <Setter Property="BackgroundColor" Value="#00FF00"/>
+                        </VisualState.Setters>
+                    </VisualState>
+
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+
+        </Button>
+
+        <Button Text="Checklist"
+                Grid.Row="3"
+                CornerRadius="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#66939598"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="35"
+                Clicked="checklistClicked"
+                  />
+
+        <!--AboutFES item-->
+        <Button Text="About FES"
+                Grid.Row="4"
+                CornerRadius="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="White"
+               
+                TextColor="Black"
+                FontSize="20"
+                Clicked="AboutFESButtonClicked"
+              />
+    </Grid>
+</ContentPage>
